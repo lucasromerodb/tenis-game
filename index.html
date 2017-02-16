@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tenis Game</title>
+  <title>Tenis Game by @lucasromerodb</title>
+  <meta name="description" content="Tenis Game by @lucasromerodb (Gamkedo tutorial)">
+  <meta name="author" content="Liveboards">
+  <meta name="robots" content="index,follow">
+  <meta name="geo.placename" content="Buenos Aires">
+  <meta name="geo.region" content="AR">
+
+  <!-- Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tenis Game">
+  <meta property="og:title" content="Tenis Game by @lucasromerodb">
+  <meta property="og:description" content="Tenis Game by @lucasromerodb (Gamkedo tutorial)">
+  <meta property="og:image" content="http://lucasromerodb.github.io/tenisgame/metaimg.jpg">
+  <meta property="og:url" content="http://lucasromerodb.github.io/tenisgame/index.html">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:site" content="@lucasromerodb">
+  <meta property="twitter:title" content="Tenis Game by @lucasromerodb">
+  <meta property="twitter:description" content="Tenis Game by @lucasromerodb (Gamkedo tutorial)">
+  <meta property="twitter:image" content="http://lucasromerodb.github.io/tenisgame/metaimg.jpg">
+  <meta property="twitter:url" content="http://lucasromerodb.github.io/tenisgame/index.html">
   <style media="screen">
     body{
+      margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -16,11 +38,31 @@
       border: 3px solid white;
       border-radius: 4px;
     }
+    footer{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: arial, sans-serif;
+      color: #fff;
+    }
+    footer a{
+      color: springgreen;
+      text-decoration: none;
+    }
+    footer a:hover{
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
   <canvas id="gameCanvas" width="800" height="600"></canvas>
+  <footer>
+    credits@game:~$ crafted by <a href="http://lucasromerodb.github.io/" target="_blank">lucasromerodb.github.io</a>
+  </footer>
 
   <script type="text/javascript">
     var canvas;
@@ -151,11 +193,12 @@
       if (showingWinScreen === true) {
         canvasContext.fillStyle = 'white';
         if (player1Score >= WINNING_SCORE) {
-          canvasContext.fillText('GANASTE :D',canvas.width/2-30+5,canvas.height/2);
+          canvasContext.fillText('YOU WON :D',canvas.width/2-30+5,canvas.height/2);
         } else if (player2Score >= WINNING_SCORE) {
           canvasContext.fillText('GAME OVER :(',canvas.width/2-35+5,canvas.height/2);
         }
-        canvasContext.fillText('CLICK PARA VOLVER A JUGAR',canvas.width/2-75+5,canvas.height/2+50);
+        canvasContext.fillStyle = 'springgreen';
+        canvasContext.fillText('~ PLAY AGAIN ~',canvas.width/2-38+5,canvas.height/2+50);
         return;
       }
 
