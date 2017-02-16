@@ -1,2 +1,2 @@
 # tenis-game
-Tenis Game from codeyourfirstgame.com (tutorial by Gamkedo)
+Tenis Game from http://codeyourfirstgame.com (tutorial by Gamkedo)
